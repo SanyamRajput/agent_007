@@ -8,7 +8,7 @@ from operator import add as add_messages
 class AgentState(TypedDict):
     messages: Annotated[Sequence[HumanMessage | AIMessage], add_messages]
 
-llm_model = ChatOllama(model="llama3", temperature=0.7)
+llm_model = ChatOllama(model="gemma:2b", temperature=0.7)
 
 system_prompt = SystemMessage(
     content="You are a helpful, general-purpose AI assistant. Answer clearly and politely."
