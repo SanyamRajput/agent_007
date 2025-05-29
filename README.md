@@ -53,8 +53,8 @@ Full license information can be found in each package's respective repository.
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/yourusername/agent007.git
-cd agent007
+git clone https://github.com/yourusername/agent_007.git
+cd agent_007
 ```
 
 ### 2. Install dependencies
@@ -115,14 +115,14 @@ Goodbye! 👋
 
 ### Configuration
 
-You can customize the model and settings by editing `agent007.py`:
+You can customize the model and settings by editing `agent_007.py`:
 
 ```python
 # Change the model
-llm = ChatOllama(model="phi3", temperature=0.7)
+llm_model = ChatOllama(model="phi3", temperature=0.7)
 
 # Adjust creativity (0.0 = focused, 1.0 = creative)
-llm = ChatOllama(model="mistral", temperature=0.9)
+llm_model = ChatOllama(model="mistral", temperature=0.9)
 ```
 
 ---
@@ -159,25 +159,10 @@ graph TD
 **Switch models easily:**
 
 ```python
-# In agent007.py
-llm = ChatOllama(model="your-preferred-model", temperature=0.7)
+# In agent_007.py
+llm_model = ChatOllama(model="your-preferred-model", temperature=0.7)
 ```
 
----
-
-## 📁 Project Structure
-
-```
-agent007/
-├── agent007.py           # 🤖 Main chatbot logic
-├── requirements.txt      # 📦 Python dependencies
-├── environment.yml       # 🐍 Conda environment file
-├── README.md            # 📖 Project documentation
-├── examples/            # 💡 Usage examples
-│   └── basic_chat.py    # Simple chat example
-└── tests/               # 🧪 Unit tests
-    └── test_agent.py    # Agent functionality tests
-```
 
 ---
 
@@ -190,18 +175,11 @@ agent007/
 system_prompt = """You are agent007, a helpful AI assistant with a friendly personality. 
 You provide clear, concise answers while maintaining a conversational tone."""
 
-llm = ChatOllama(
+llm_model = ChatOllama(
     model="mistral", 
     temperature=0.7,
     system=system_prompt
 )
-```
-
-### Memory Management
-
-```python
-# Configure conversation memory window
-MAX_MESSAGES = 20  # Keep last 20 messages for context
 ```
 
 ---
