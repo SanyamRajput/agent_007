@@ -60,12 +60,20 @@ cd agent_007
 ### 2. Install dependencies
 
 ```bash
-# Using pip
-pip install -r requirements.txt
+# Core LangChain and LangGraph dependencies
+langchain>=0.1.0
+langgraph>=0.0.40
+langchain-community>=0.0.20
+langchain-core>=0.1.0
 
-# Or using conda
-conda env create -f environment.yml
-conda activate agent007
+# Ollama integration
+ollama>=0.1.7
+
+# Additional utilities
+pydantic>=2.0.0
+typing-extensions>=4.5.0
+
+
 ```
 
 ### 3. Start Ollama and load a model
